@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    gap: 1rem;
+}
+
+.card {
+    aspect-ratio: 1.5/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    cursor: pointer;
+    user-select: none;
+    background-image: url("https://images.cdn2.stockunlimited.net/preview1300/playing-cards-background_1608080.jpg");
+    background-size: contain;
+}
+
+.card.open {
+    background-image: url("");
+}
+
+.card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
